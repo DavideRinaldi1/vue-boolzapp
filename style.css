@@ -9,7 +9,95 @@ body{
     height: 95vh;
     margin-top: 2.5vh;
     margin-bottom: 2.5vh;
-    max-width: 1400px !important;
+    /* max-width: 1400px !important; */
+}
+
+.border_dx{
+    border-right: 1px solid lightgrey;
+}
+
+.search{
+    width: 77%;
+    height: 95%;
+    border: none;
+    padding: 5px;
+}
+
+button{
+    width: 18%;
+    height: 95%;
+    background-color: white;
+    padding: 5px;
+    color: #d9dbd4;
+    border: none;
+}
+
+.main{
+    background-image: url('img/mine.jpg');
+    height: 700px;
+}
+
+.message{
+    border: none;
+    width: 100%;
+    border-radius: 5px;
+    height: 50px;
+}
+
+.box{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+.profile{
+    background-image: url('img/avatar_1.jpg');
+    background-size: cover;
+}
+
+.box img{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+.notify{
+    background-color: #f2fbff;
+    color: #8edafc;
+    font-size: 1.5rem;
+}
+
+.chat h6{
+    padding-top: 15px;
+
+}
+
+/* common */
+.bg_ltgrey{
+    background-color: #eaeaea ;
+}
+
+.bg_ltblue{
+    background-color: #8edafc;
+}
+
+.bg_white{
+    background-color: #fff;
+}
+
+.bg_fafa{
+    background-color: #fafafa;
+}
+
+.my_icons{
+    font-size: 1.3rem;
+    color: #6b7376;
+}
+
+.icons_header{
+    margin: 8px;
+    color: #b1b1b1;
+    font-size: 1.3rem;
 }
 
 /* debug */
