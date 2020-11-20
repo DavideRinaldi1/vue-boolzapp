@@ -1,0 +1,26 @@
+body{
+    height: 100%;
+    background: linear-gradient(to bottom, #009688 15%, #d9dbd4 0%);
+    background-repeat: no-repeat;
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.ms_container{
+    height: 95vh;
+    margin-top: 2.5vh;
+    margin-bottom: 2.5vh;
+    max-width: 1400px !important;
+}
+
+/* debug */
+.debug{
+    border: 2px solid blue;
+}
+
+.h70p{
+    height: 70px;
+}
+
+.h50p{
+    height: 50px;
+}
