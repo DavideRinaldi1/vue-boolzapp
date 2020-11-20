@@ -50,11 +50,6 @@ button{
     border-radius: 50%;
 }
 
-.profile{
-    background-image: url('img/avatar_1.jpg');
-    background-size: cover;
-}
-
 .box img{
     height: 50px;
     width: 50px;
@@ -67,9 +62,12 @@ button{
     font-size: 1.5rem;
 }
 
+.chat{
+    flex-wrap: nowrap;
+}
+
 .chat h6{
     padding-top: 15px;
-
 }
 
 /* common */
@@ -111,4 +109,8 @@ button{
 
 .h50p{
     height: 50px;
+}
+
+.h650{
+    height: 650px;
 }
