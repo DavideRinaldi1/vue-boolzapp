@@ -16,18 +16,18 @@
     <body>
         <div id="root">
             <div class="container ms_container">
-                <div class="row">
-                    <div class="col-4 border_dx">
+                <div class="row h100">
+                    <div class="col-4 border_dx h100 bg_white">
                         <div class="row">
                             <div class="col h70p bg_ltgrey">
                                 <div class="row h70p d-flex">
                                     <div class="col-3 d-flex align-items-center justify-content-center">
                                         <div class="box">
-                                            <img src="img/avatar_1.jpg" alt="">
+                                            <img :src="user.profileImg" alt="">
                                         </div>
                                     </div>
                                     <div class="col-6 d-flex">
-                                        <span class="d-flex align-items-center">Nome utente</span>
+                                        <span class="d-flex align-items-center">{{user.name}}</span>
                                     </div>
                                     <div class="col-3 d-flex align-items-center justify-content-center">
                                         <i class="fas fa-circle-notch icons_header"></i>
@@ -46,8 +46,8 @@
                                         </div>
                                     </div>
                                     <div class="col-9 d-flex align-items-center">
-                                        <span>
-                                            <strong>Ricevi notifiche di nuovi messaggi</strong> <br>
+                                        <span class="sm-bold">
+                                            Ricevi notifiche di nuovi messaggi <br>
                                             <small class="text-muted "><u>Attiva notifiche desktop</u></small>
                                         </span>
                                     </div>
@@ -60,34 +60,37 @@
                                 <input type="text" class="search" placeholder="Cerca o inizia una nuova chat">
                             </div>
                         </div>
-                        <div class="row h650">
-                            <div class="col-12 bg_white">
-                                <div class="row h70p">
+                        <div class="row">
+                            <div class="col bg_white">
+                                <div class="row h70p chat">
                                     <div class="col-3 d-flex align-items-center justify-content-center">
                                         <div class="box">
                                             <img src="img/avatar_2.jpg" alt="">
                                         </div>
                                     </div>
-                                    <div class="col-9 chat">
+                                    <div class="col-9 nameChat">
                                         <h6>Michele</h6>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-12 bg_white">
-                                <div class="row h70p">
+                        </div>
+                        <div class="row">
+                            <div class="col bg_white">
+                                <div class="row h70p chat">
                                     <div class="col-3 d-flex align-items-center justify-content-center">
                                         <div class="box">
                                             <img src="img/avatar_3.jpg" alt="">
                                         </div>
                                     </div>
-                                    <div class="col-9 chat">
+                                    <div class="col-9 nameChat">
                                         <h6>Giovanni</h6>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-8">
+                
+                    <div class="col-8 h100">
                         <div class="row">
                             <div class="col h70p bg_ltgrey">
                                 <div class="row h70p">
@@ -131,8 +134,10 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div>   
             </div>
         </div>
+        <!-- script -->
+        <script src="main.js"></script>
     </body>
 </html>

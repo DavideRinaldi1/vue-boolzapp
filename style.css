@@ -34,7 +34,8 @@ button{
 
 .main{
     background-image: url('img/mine.jpg');
-    height: 700px;
+    height: 750px;
+    
 }
 
 .message{
@@ -63,10 +64,9 @@ button{
 }
 
 .chat{
-    flex-wrap: nowrap;
+    border-bottom: 1px solid lightgray;
 }
-
-.chat h6{
+.nameChat h6{
     padding-top: 15px;
 }
 
@@ -98,6 +98,11 @@ button{
     font-size: 1.3rem;
 }
 
+.sm-bold{
+    font-weight: 700;
+    font-size: .96rem;
+}
+
 /* debug */
 .debug{
     border: 2px solid blue;
@@ -113,4 +118,8 @@ button{
 
 .h650{
     height: 650px;
+}
+
+.h100{
+    height: 100%;
 }
