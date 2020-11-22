@@ -30,9 +30,9 @@
                                         <span class="d-flex align-items-center">{{user.name}}</span>
                                     </div>
                                     <div class="col-3 d-flex align-items-center justify-content-center">
-                                        <i class="fas fa-circle-notch icons_header"></i>
-                                        <i class="fas fa-comment-alt icons_header"></i>
-                                        <i class="fas fa-ellipsis-v icons_header"></i>
+                                        <a href="#"><i class="fas fa-circle-notch icons_header"></i></a>
+                                        <a href="#"><i class="fas fa-comment-alt icons_header"></i></a>
+                                        <a href="#"><i class="fas fa-ellipsis-v icons_header"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -60,34 +60,24 @@
                                 <input type="text" class="search" placeholder="Cerca o inizia una nuova chat">
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col bg_white">
-                                <div class="row h70p chat">
-                                    <div class="col-3 d-flex align-items-center justify-content-center">
-                                        <div class="box">
-                                            <img src="img/avatar_2.jpg" alt="">
+                        <ul class="list-unstyled">
+                            <li v-for="(e, i) in contactArr">
+                                <div class="row">
+                                    <div class="col bg_white">
+                                        <div class="row h70p chat">
+                                            <div class="col-3 d-flex align-items-center justify-content-center">
+                                                <div class="box">
+                                                    <img :src="e.profileImg" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="col-9 nameChat">
+                                                <h6>{{e.name}}</h6>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="col-9 nameChat">
-                                        <h6>Michele</h6>
-                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col bg_white">
-                                <div class="row h70p chat">
-                                    <div class="col-3 d-flex align-items-center justify-content-center">
-                                        <div class="box">
-                                            <img src="img/avatar_3.jpg" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="col-9 nameChat">
-                                        <h6>Giovanni</h6>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                            </li>
+                        </ul>
                     </div>
                 
                     <div class="col-8 h100">
@@ -102,13 +92,15 @@
                                     <div class="col-8 d-flex align-items-center">
                                         <span>
                                             Giovanni <br>
-                                            <small class="text-muted">Ultimo accesso alle</small>
+                                            <small class="text-muted">Ultimo accesso alle 
+                                            {{}}</small>
+                                            <!-- non so come richimare la chiave lastAccess di user one all'interno -->
                                         </span>
                                     </div>
                                     <div class="col-3 d-flex align-items-center justify-content-end">
-                                        <i class="fas fa-search icons_header"></i>
-                                        <i class="fas fa-paperclip icons_header"></i>
-                                        <i class="fas fa-ellipsis-v icons_header"></i>
+                                        <a href="#"><i class="fas fa-search icons_header"></i></a>
+                                        <a href="#"><i class="fas fa-paperclip icons_header"></i></a>
+                                        <a href="#"><i class="fas fa-ellipsis-v icons_header"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -122,13 +114,13 @@
                             <div class="col h70p bg_ltgrey">
                                 <div class="row h70p">
                                     <div class="col-1 d-flex align-items-center justify-content-center">
-                                        <i class="far fa-smile my_icons"></i>
+                                        <a href="#"><i class="far fa-smile my_icons"></i></a>
                                     </div>
                                     <div class="col-10 d-flex align-items-center">
                                         <input type="text" class="message" placeholder="Scrivi un messaggio">
                                     </div>
                                     <div class="col-1 d-flex align-items-center justify-content-center">
-                                        <i class="fas fa-microphone my_icons"></i>
+                                        <a href="#"><i class="fas fa-microphone my_icons"></i></a>
                                     </div>
                                 </div>
                             </div>

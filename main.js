@@ -7,37 +7,53 @@ const app = new Vue({
         },
     
         contactArr: [
-            {
+            userOne = {
                 profileImg: 'img/avatar_1.jpg',
-                name: 'Giovanni'
+                name: 'Giovanni',
+                message: 'Ciao Davide! Come stai?',
+                lastAccess: '10:49'
             },
-            {
+            userTwo = {
                 profileImg: 'img/avatar_2.jpg',
-                name: 'Michele'
+                name: 'Michele',
+                message: 'Ciao Davide! Come stai?',
+                lastAccess: '10:49'
             },
-            {
+            userThree = {
                 profileImg: 'img/avatar_3.jpg',
-                name: 'Francesco'
+                name: 'Francesco',
+                message: 'Ciao Davide! Come stai?',
+                lastAccess: '10:49'
             },
-            {
+            userFour = {
                 profileImg: 'img/avatar_4.jpg',
-                name: 'Donatella'
+                name: 'Jhonny',
+                message: 'Ciao Davide! Come stai?',
+                lastAccess: '10:49'
             },
-            {
+            userFive = {
                 profileImg: 'img/avatar_5.jpg',
-                name: 'Franca'
+                name: 'Franca',
+                message: 'Ciao Davide! Come stai?',
+                lastAccess: '10:49'
             },
-            {
+            userSix = {
                 profileImg: 'img/avatar_6.jpg',
-                name: 'Jhonny'
+                name: 'Donatella',
+                message: 'Ciao Davide! Come stai?',
+                lastAccess: '10:49'
             },
-            {
+            userSeven = {
                 profileImg: 'img/avatar_8.jpg',
-                name: 'Federico'
+                name: 'Federico',
+                message: 'Ciao Davide! Come stai?',
+                lastAccess: '10:49'
             },
-            {
+            userEight = {
                 profileImg: 'img/avatar_io.jpg',
-                name: 'Giorgia'
+                name: 'Giorgia',
+                message: 'Ciao Davide! Come stai?',
+                lastAccess: '10:49'
             }
         ]
     }      
