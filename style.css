@@ -35,6 +35,7 @@ button{
 .main{
     background-image: url('img/mine.jpg');
     height: 750px;
+    position: relative;
     
 }
 
@@ -75,6 +76,30 @@ button{
     padding-top: 15px;
 }
 
+.messages{
+    padding: 10px 60px 10px 10px;
+    font-size: .8rem;
+    max-width: 200px;
+    margin-top: 15px;
+    margin-left: 90px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.sent{
+    position: absolute;
+    right: 90px;
+
+}
+
+.hour{
+    color: gray;
+    font-size: .7rem;
+    position: absolute;
+    bottom: 0;
+    right: 5px;
+}
+
 /* common */
 .bg_ltgrey{
     background-color: #eaeaea ;
@@ -90,6 +115,10 @@ button{
 
 .bg_fafa{
     background-color: #fafafa;
+}
+
+.bg_green{
+    background-color: #ddf8c6;
 }
 
 .my_icons{
@@ -130,5 +159,7 @@ button{
 }
 
 .hmain{
-    height: 83%;
+    height: calc(100% - 140px);
 }
+
+

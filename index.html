@@ -61,9 +61,13 @@
                             </div>
                         </div>
                         <ul class="list-unstyled">
-                            <li v-for="(e, i) in contactArr">
-                                <div class="row">
-                                    <div class="col bg_white">
+                            <li 
+                            v-for="(e, i) in contactArr" 
+                            @click="selectedContact(i);">
+                                <div class="row"
+                                :class="{bg_ltgrey: counterIndexContact == i}"
+                                >
+                                    <div class="col">
                                         <div class="row h70p chat">
                                             <div class="col-3 d-flex align-items-center justify-content-center">
                                                 <div class="box">
@@ -86,15 +90,14 @@
                                 <div class="row h70p">
                                     <div class="col-1 d-flex align-items-center justify-content-center">
                                         <div class="box">
-                                            <img src="img/avatar_3.jpg" alt="">
+                                            <img :src="contactArr[counterIndexContact].profileImg" alt="">
                                         </div>
                                     </div>
                                     <div class="col-8 d-flex align-items-center">
                                         <span>
-                                            Giovanni <br>
+                                            {{contactArr[counterIndexContact].name}}<br>
                                             <small class="text-muted">Ultimo accesso alle 
-                                            {{}}</small>
-                                            <!-- non so come richimare la chiave lastAccess di user one all'interno -->
+                                            {{contactArr[counterIndexContact].lastAccess}}</small>
                                         </span>
                                     </div>
                                     <div class="col-3 d-flex align-items-center justify-content-end">
@@ -107,7 +110,14 @@
                         </div>
                         <div class="row hmain">
                             <div class="col main h100">
-
+                                <p class="messages bg_white">
+                                    {{contactArr[counterIndexContact].message}}
+                                    <span class="hour">9:45</span>
+                                </p>
+                                <p class="messages bg_green sent">
+                                    Weilà rockstar
+                                    <span class="hour">9:50</span>
+                                </p>
                             </div>
                         </div>
                         <div class="row">

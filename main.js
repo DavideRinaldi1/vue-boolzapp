@@ -5,56 +5,74 @@ const app = new Vue({
             profileImg: 'img/avatar_7.jpg',
             name: 'Davide Rinaldi'
         },
+
+        counterIndexContact: 0,
+        userMessage: '',
     
         contactArr: [
-            userOne = {
+            {
                 profileImg: 'img/avatar_1.jpg',
                 name: 'Giovanni',
                 message: 'Ciao Davide! Come stai?',
-                lastAccess: '10:49'
+                dateMess: '15:11 23/11/2020',
+                lastAccess: '10:49',
             },
-            userTwo = {
+            {
                 profileImg: 'img/avatar_2.jpg',
                 name: 'Michele',
-                message: 'Ciao Davide! Come stai?',
-                lastAccess: '10:49'
+                message: 'Ci manca il decimo a calcetto',
+                dateMess: '15:11 23/11/2020',
+                lastAccess: '10:15',
             },
-            userThree = {
+            {
                 profileImg: 'img/avatar_3.jpg',
                 name: 'Francesco',
-                message: 'Ciao Davide! Come stai?',
-                lastAccess: '10:49'
+                message: 'Stasera cosa fate?',
+                dateMess: '15:11 23/11/2020',
+                lastAccess: '9:32',
             },
-            userFour = {
+            {
                 profileImg: 'img/avatar_4.jpg',
                 name: 'Jhonny',
-                message: 'Ciao Davide! Come stai?',
-                lastAccess: '10:49'
+                message: 'Dormi?',
+                dateMess: '15:11 23/11/2020',
+                lastAccess: '6:46',
             },
-            userFive = {
+            {
                 profileImg: 'img/avatar_5.jpg',
                 name: 'Franca',
-                message: 'Ciao Davide! Come stai?',
-                lastAccess: '10:49'
+                message: 'Vieni in palestra oggi?',
+                dateMess: '15:11 23/11/2020',
+                lastAccess: '10:01',
             },
-            userSix = {
+            {
                 profileImg: 'img/avatar_6.jpg',
                 name: 'Donatella',
-                message: 'Ciao Davide! Come stai?',
-                lastAccess: '10:49'
+                message: 'Posso chiamarti?',
+                dateMess: '15:11 23/11/2020',
+                lastAccess: '10:52',
             },
-            userSeven = {
+            {
                 profileImg: 'img/avatar_8.jpg',
                 name: 'Federico',
-                message: 'Ciao Davide! Come stai?',
-                lastAccess: '10:49'
+                message: 'Sono stanco',
+                dateMess: '15:11 23/11/2020',
+                lastAccess: '10:29',
             },
-            userEight = {
+            {
                 profileImg: 'img/avatar_io.jpg',
                 name: 'Giorgia',
-                message: 'Ciao Davide! Come stai?',
-                lastAccess: '10:49'
+                message: 'Chi è Jessico calcetto?',
+                dateMess: '15:11 23/11/2020',
+                lastAccess: '9:59',
             }
         ]
-    }      
+    },
+    methods: {
+        selectedContact(index){
+            console.log(index);
+            this.counterIndexContact = index;
+        },
+
+    }     
 })
