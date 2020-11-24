@@ -18,12 +18,12 @@ const app = new Vue({
                 historicalMessage: [
                     {
                         message: 'Ciao Davide! Come stai?',
-                        time: '12:40',
+                        time: new Date().toLocaleDateString(),
                         type: 'ricevuto',
                     },
                     {
                         message: 'ho un po di Covid, ma il tempo di una tachipirina e scendo',
-                        time: '12:40',
+                        time: new Date().toLocaleDateString(),
                         type: 'inviato',
                     }
                 ],
@@ -36,12 +36,12 @@ const app = new Vue({
                 historicalMessage: [
                     {
                         message: 'Lasciami stare o chiamo la polizia',
-                        time: '12:40',
+                        time: new Date().toLocaleDateString(),
                         type: 'ricevuto',
                     },
                     {
                         message: 'Ma perchè',
-                        time: '12:40',
+                        time: new Date().toLocaleDateString(),
                         type: 'inviato',
                     }
                 ],
@@ -54,12 +54,12 @@ const app = new Vue({
                 historicalMessage: [
                     {
                         message: 'Ti va di chiamarmi?',
-                        time: '12:40',
+                        time: new Date().toLocaleDateString(),
                         type: 'ricevuto',
                     },
                     {
                         message: 'Non ho credito',
-                        time: '12:40',
+                        time: new Date().toLocaleDateString(),
                         type: 'inviato',
                     }
                 ],
@@ -72,12 +72,12 @@ const app = new Vue({
                 historicalMessage: [
                     {
                         message: 'Dove vai a dicembre?',
-                        time: '12:40',
+                        time: new Date().toLocaleDateString(),
                         type: 'ricevuto',
                     },
                     {
                         message: 'Dove vuoi che vada, in zona rossa',
-                        time: '12:40',
+                        time: new Date().toLocaleDateString(),
                         type: 'inviato',
                     }
 
@@ -91,12 +91,12 @@ const app = new Vue({
                 historicalMessage: [
                     {
                         message: 'Che fai stasera?',
-                        time: '12:40',
+                        time: new Date().toLocaleDateString(),
                         type: 'ricevuto',
                     },
                     {
                         message: 'Cinema, poi ristorante... ah no',
-                        time: '12:40',
+                        time: new Date().toLocaleDateString(),
                         type: 'inviato',
                     }
 
@@ -110,12 +110,12 @@ const app = new Vue({
                 historicalMessage: [
                     {
                         message: 'Come ho dormito bene',
-                        time: '12:40',
+                        time: new Date().toLocaleDateString(),
                         type: 'ricevuto',
                     },
                     {
                         message: 'Sai quanto me ne frega',
-                        time: '12:40',
+                        time: new Date().toLocaleDateString(),
                         type: 'inviato',
                     }
 
@@ -129,12 +129,12 @@ const app = new Vue({
                 historicalMessage: [
                     {
                         message: 'Marianna va in campagna',
-                        time: '12:40',
+                        time: new Date().toLocaleDateString(),
                         type: 'ricevuto',
                     },
                     {
                         message: 'Come devo interpretare questo messaggio?',
-                        time: '12:40',
+                        time: new Date().toLocaleDateString(),
                         type: 'inviato',
                     }
 
@@ -148,12 +148,12 @@ const app = new Vue({
                 historicalMessage: [
                     {
                         message: 'Chi è jessico calcetto?',
-                        time: '12:40',
+                        time: new Date().toLocaleDateString(),
                         type: 'ricevuto',
                     },
                     {
                         message: 'La mia amante',
-                        time: '12:40',
+                        time: new Date().toLocaleDateString(),
                         type: 'inviato',
                     }
 
@@ -169,7 +169,7 @@ const app = new Vue({
         sendMessage(){
             this.contactArr[this.counterIndexContact].historicalMessage.push({
                 message: this.message,
-                time: '12:40',
+                time: new Date().toLocaleDateString(),
                 type: 'inviato',
             })
 
@@ -179,7 +179,7 @@ const app = new Vue({
             this.contactArr[this.counterIndexContact].historicalMessage.push(
                 {
                     message: 'Ci sono riuscito!!!',
-                    time: '12:40',
+                    time: new Date().toLocaleDateString(),
                     type: 'ricevuto',
                 }
             )
