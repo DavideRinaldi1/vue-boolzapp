@@ -7,64 +7,112 @@ const app = new Vue({
         },
 
         counterIndexContact: 0,
-        userMessage: '',
+        message: '',
     
         contactArr: [
             {
                 profileImg: 'img/avatar_1.jpg',
                 name: 'Giovanni',
-                message: 'Ciao Davide! Come stai?',
                 dateMess: '15:11 23/11/2020',
                 lastAccess: '10:49',
+                historicalMessage: [
+                    {
+                        message: 'Ciao Davide! Come stai?',
+                        time: '12:40',
+                        type: 'ricevuto',
+                    }
+                ],
             },
             {
                 profileImg: 'img/avatar_2.jpg',
                 name: 'Michele',
-                message: 'Ci manca il decimo a calcetto',
                 dateMess: '15:11 23/11/2020',
                 lastAccess: '10:15',
+                historicalMessage: [
+                    {
+                        message: 'Lasciami stare o chiamo la polizia',
+                        time: '12:40',
+                        type: 'ricevuto',
+                    }
+                ],
             },
             {
                 profileImg: 'img/avatar_3.jpg',
                 name: 'Francesco',
-                message: 'Stasera cosa fate?',
                 dateMess: '15:11 23/11/2020',
                 lastAccess: '9:32',
+                historicalMessage: [
+                    {
+                        message: 'Ti va di chiamarmi?',
+                        time: '12:40',
+                        type: 'ricevuto',
+                    }
+                ],
             },
             {
                 profileImg: 'img/avatar_4.jpg',
                 name: 'Jhonny',
-                message: 'Dormi?',
                 dateMess: '15:11 23/11/2020',
                 lastAccess: '6:46',
+                historicalMessage: [
+                    {
+                        message: 'Dove vai a dicembre?',
+                        time: '12:40',
+                        type: 'ricevuto',
+                    }
+                ],
             },
             {
                 profileImg: 'img/avatar_5.jpg',
                 name: 'Franca',
-                message: 'Vieni in palestra oggi?',
                 dateMess: '15:11 23/11/2020',
                 lastAccess: '10:01',
+                historicalMessage: [
+                    {
+                        message: 'Che fai stasera?',
+                        time: '12:40',
+                        type: 'ricevuto',
+                    }
+                ],
             },
             {
                 profileImg: 'img/avatar_6.jpg',
                 name: 'Donatella',
-                message: 'Posso chiamarti?',
                 dateMess: '15:11 23/11/2020',
                 lastAccess: '10:52',
+                historicalMessage: [
+                    {
+                        message: 'Come ho dormito bene',
+                        time: '12:40',
+                        type: 'ricevuto',
+                    }
+                ],
             },
             {
                 profileImg: 'img/avatar_8.jpg',
                 name: 'Federico',
-                message: 'Sono stanco',
                 dateMess: '15:11 23/11/2020',
                 lastAccess: '10:29',
+                historicalMessage: [
+                    {
+                        message: 'Marianna va in campagna',
+                        time: '12:40',
+                        type: 'ricevuto',
+                    }
+                ],
             },
             {
                 profileImg: 'img/avatar_io.jpg',
                 name: 'Giorgia',
-                message: 'Chi è Jessico calcetto?',
                 dateMess: '15:11 23/11/2020',
                 lastAccess: '9:59',
+                historicalMessage: [
+                    {
+                        message: 'Chi è jessico calcetto?',
+                        time: '12:40',
+                        type: 'ricevuto',
+                    }
+                ],
             }
         ]
     },
@@ -73,6 +121,15 @@ const app = new Vue({
             console.log(index);
             this.counterIndexContact = index;
         },
+        sendMessage(){
+            this.contactArr[this.counterIndexContact].historicalMessage.push({
+                message: this.message,
+                time: '12:40',
+                type: 'inviato',
+            })
+
+            this.message = ''
+        }
 
     }     
 })

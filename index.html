@@ -110,14 +110,16 @@
                         </div>
                         <div class="row hmain">
                             <div class="col main h100">
-                                <p class="messages bg_white">
-                                    {{contactArr[counterIndexContact].message}}
-                                    <span class="hour">9:45</span>
-                                </p>
-                                <p class="messages bg_green sent">
-                                    Weilà rockstar
-                                    <span class="hour">9:50</span>
-                                </p>
+                                <template v-for="thisMessage in contactArr[counterIndexContact].historicalMessage">
+                                    <p class="messages" :class="{bg_white: contactArr[counterIndexContact].historicalMessage.type === 'ricevuto'}">
+                                        {{contactArr[counterIndexContact].historicalMessage.message}}
+                                        <span class="hour">{{contactArr[counterIndexContact].historicalMessage.time}}</span>
+                                    </p>
+                                    <!-- <p class="messages bg_green sent">
+                                        {{thisMessage.text}}
+                                        <span class="hour">{{contactArr[counterIndexContact].historicalMessage.time}}</span>
+                                    </p> -->
+                                </template>
                             </div>
                         </div>
                         <div class="row">
@@ -127,7 +129,7 @@
                                         <a href="#"><i class="far fa-smile my_icons"></i></a>
                                     </div>
                                     <div class="col-10 d-flex align-items-center">
-                                        <input type="text" class="message" placeholder="Scrivi un messaggio">
+                                        <input type="text" class="message" placeholder="Scrivi un messaggio" v-model="message" @keyup.13="sendMessage()">
                                     </div>
                                     <div class="col-1 d-flex align-items-center justify-content-center">
                                         <a href="#"><i class="fas fa-microphone my_icons"></i></a>
