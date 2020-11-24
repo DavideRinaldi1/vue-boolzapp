@@ -20,6 +20,11 @@ const app = new Vue({
                         message: 'Ciao Davide! Come stai?',
                         time: '12:40',
                         type: 'ricevuto',
+                    },
+                    {
+                        message: 'ho un po di Covid, ma il tempo di una tachipirina e scendo',
+                        time: '12:40',
+                        type: 'inviato',
                     }
                 ],
             },
@@ -33,6 +38,11 @@ const app = new Vue({
                         message: 'Lasciami stare o chiamo la polizia',
                         time: '12:40',
                         type: 'ricevuto',
+                    },
+                    {
+                        message: 'Ma perchè',
+                        time: '12:40',
+                        type: 'inviato',
                     }
                 ],
             },
@@ -46,6 +56,11 @@ const app = new Vue({
                         message: 'Ti va di chiamarmi?',
                         time: '12:40',
                         type: 'ricevuto',
+                    },
+                    {
+                        message: 'Non ho credito',
+                        time: '12:40',
+                        type: 'inviato',
                     }
                 ],
             },
@@ -59,7 +74,13 @@ const app = new Vue({
                         message: 'Dove vai a dicembre?',
                         time: '12:40',
                         type: 'ricevuto',
+                    },
+                    {
+                        message: 'Dove vuoi che vada, in zona rossa',
+                        time: '12:40',
+                        type: 'inviato',
                     }
+
                 ],
             },
             {
@@ -72,7 +93,13 @@ const app = new Vue({
                         message: 'Che fai stasera?',
                         time: '12:40',
                         type: 'ricevuto',
+                    },
+                    {
+                        message: 'Cinema, poi ristorante... ah no',
+                        time: '12:40',
+                        type: 'inviato',
                     }
+
                 ],
             },
             {
@@ -85,7 +112,13 @@ const app = new Vue({
                         message: 'Come ho dormito bene',
                         time: '12:40',
                         type: 'ricevuto',
+                    },
+                    {
+                        message: 'Sai quanto me ne frega',
+                        time: '12:40',
+                        type: 'inviato',
                     }
+
                 ],
             },
             {
@@ -98,7 +131,13 @@ const app = new Vue({
                         message: 'Marianna va in campagna',
                         time: '12:40',
                         type: 'ricevuto',
+                    },
+                    {
+                        message: 'Come devo interpretare questo messaggio?',
+                        time: '12:40',
+                        type: 'inviato',
                     }
+
                 ],
             },
             {
@@ -111,7 +150,13 @@ const app = new Vue({
                         message: 'Chi è jessico calcetto?',
                         time: '12:40',
                         type: 'ricevuto',
+                    },
+                    {
+                        message: 'La mia amante',
+                        time: '12:40',
+                        type: 'inviato',
                     }
+
                 ],
             }
         ]
@@ -129,6 +174,18 @@ const app = new Vue({
             })
 
             this.message = ''
+        },
+        replyMessage(){
+            this.contactArr[this.counterIndexContact].historicalMessage.push(
+                {
+                    message: 'Ci sono riuscito!!!',
+                    time: '12:40',
+                    type: 'ricevuto',
+                }
+            )
+        },
+        timeOut(){
+            setTimeout(()=> {this.replyMessage()}, 3000)
         }
 
     }     

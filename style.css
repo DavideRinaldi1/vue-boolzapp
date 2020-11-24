@@ -36,7 +36,13 @@ button{
     background-image: url('img/mine.jpg');
     height: 750px;
     position: relative;
-    
+ 
+}
+
+.main::after{
+    content: '';
+    display: table;
+    clear: both;
 }
 
 .message{
@@ -84,12 +90,18 @@ button{
     margin-left: 90px;
     border-radius: 5px;
     position: relative;
+    clear: both;
 }
 
-.sent{
-    position: absolute;
-    right: 90px;
+.inviato{
+    float: right;
+     background-color: #ddf8c6;
+     margin-right: 90px;
+}
 
+.ricevuto{
+    float: left;
+     background-color: #fff;
 }
 
 .hour{

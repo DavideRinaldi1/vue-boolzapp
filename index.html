@@ -110,15 +110,11 @@
                         </div>
                         <div class="row hmain">
                             <div class="col main h100">
-                                <template v-for="thisMessage in contactArr[counterIndexContact].historicalMessage">
-                                    <p class="messages" :class="{bg_white: contactArr[counterIndexContact].historicalMessage.type === 'ricevuto'}">
-                                        {{contactArr[counterIndexContact].historicalMessage.message}}
-                                        <span class="hour">{{contactArr[counterIndexContact].historicalMessage.time}}</span>
+                                <template v-for="(message, index) in contactArr[counterIndexContact].historicalMessage">
+                                    <p class="messages" :class="message.type">
+                                        {{message.message}}
+                                        <span class="hour">{{message.time}}</span>
                                     </p>
-                                    <!-- <p class="messages bg_green sent">
-                                        {{thisMessage.text}}
-                                        <span class="hour">{{contactArr[counterIndexContact].historicalMessage.time}}</span>
-                                    </p> -->
                                 </template>
                             </div>
                         </div>
@@ -129,7 +125,7 @@
                                         <a href="#"><i class="far fa-smile my_icons"></i></a>
                                     </div>
                                     <div class="col-10 d-flex align-items-center">
-                                        <input type="text" class="message" placeholder="Scrivi un messaggio" v-model="message" @keyup.13="sendMessage()">
+                                        <input type="text" class="message" placeholder="Scrivi un messaggio" v-model="message" @keyup.13="sendMessage(), timeOut()">
                                     </div>
                                     <div class="col-1 d-flex align-items-center justify-content-center">
                                         <a href="#"><i class="fas fa-microphone my_icons"></i></a>
