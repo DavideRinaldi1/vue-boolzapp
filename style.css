@@ -36,7 +36,14 @@ button{
     background-image: url('img/mine.jpg');
     height: 750px;
     position: relative;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
  
+}
+
+.main::-webkit-scrollbar {
+    display: none;
 }
 
 .main::after{
@@ -110,6 +117,17 @@ button{
     position: absolute;
     bottom: 0;
     right: 5px;
+}
+
+.listContact{
+    overflow-y: scroll;
+    overflow-x: hidden;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.listContact::-webkit-scrollbar {
+    display: none;
 }
 
 /* common */

@@ -60,10 +60,10 @@
                                 <input type="text" class="search" placeholder="Cerca o inizia una nuova chat">
                             </div>
                         </div>
-                        <ul class="list-unstyled">
-                            <li 
-                            v-for="(e, i) in contactArr" 
-                            @click="selectedContact(i);">
+                        <ul class="list-unstyled listContact">
+                            <li
+                            v-for="(e, i) in contactArr"
+                            @click="selectedContact(i)">
                                 <div class="row"
                                 :class="{bg_ltgrey: counterIndexContact == i}"
                                 >
@@ -83,7 +83,7 @@
                             </li>
                         </ul>
                     </div>
-                
+
                     <div class="col-8 h100">
                         <div class="row">
                             <div class="col h70p bg_ltgrey">
@@ -96,7 +96,7 @@
                                     <div class="col-8 d-flex align-items-center">
                                         <span>
                                             {{contactArr[counterIndexContact].name}}<br>
-                                            <small class="text-muted">Ultimo accesso alle 
+                                            <small class="text-muted">Ultimo accesso alle
                                             {{contactArr[counterIndexContact].lastAccess}}</small>
                                         </span>
                                     </div>
@@ -134,7 +134,7 @@
                             </div>
                         </div>
                     </div>
-                </div>   
+                </div>
             </div>
         </div>
         <!-- script -->
