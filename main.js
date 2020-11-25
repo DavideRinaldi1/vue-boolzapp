@@ -9,13 +9,12 @@ const app = new Vue({
         counterIndexContact: 0,
         message: '',
         searchInput: '',
-        filteredContact: [],
-    
         contactArr: [
             {
                 profileImg: 'img/avatar_1.jpg',
                 name: 'Giovanni',
                 lastAccess: '10:49',
+                visibile: true,
                 historicalMessage: [
                     {
                         message: 'Ciao Davide! Come stai?',
@@ -33,6 +32,7 @@ const app = new Vue({
                 profileImg: 'img/avatar_2.jpg',
                 name: 'Michele',
                 lastAccess: '10:15',
+                visibile: true,
                 historicalMessage: [
                     {
                         message: 'Lasciami stare o chiamo la polizia',
@@ -50,6 +50,7 @@ const app = new Vue({
                 profileImg: 'img/avatar_3.jpg',
                 name: 'Francesco',
                 lastAccess: '9:32',
+                visibile: true,
                 historicalMessage: [
                     {
                         message: 'Ti va di chiamarmi?',
@@ -67,6 +68,7 @@ const app = new Vue({
                 profileImg: 'img/avatar_4.jpg',
                 name: 'Jhonny',
                 lastAccess: '6:46',
+                visibile: true,
                 historicalMessage: [
                     {
                         message: 'Dove vai a dicembre?',
@@ -85,6 +87,7 @@ const app = new Vue({
                 profileImg: 'img/avatar_5.jpg',
                 name: 'Franca',
                 lastAccess: '10:01',
+                visibile: true,
                 historicalMessage: [
                     {
                         message: 'Che fai stasera?',
@@ -103,6 +106,7 @@ const app = new Vue({
                 profileImg: 'img/avatar_6.jpg',
                 name: 'Donatella',
                 lastAccess: '10:52',
+                visibile: false,
                 historicalMessage: [
                     {
                         message: 'Come ho dormito bene',
@@ -121,6 +125,7 @@ const app = new Vue({
                 profileImg: 'img/avatar_8.jpg',
                 name: 'Federico',
                 lastAccess: '10:29',
+                visibile: true,
                 historicalMessage: [
                     {
                         message: 'Marianna va in campagna',
@@ -139,6 +144,7 @@ const app = new Vue({
                 profileImg: 'img/avatar_io.jpg',
                 name: 'Giorgia',
                 lastAccess: '9:59',
+                visibile: true,
                 historicalMessage: [
                     {
                         message: 'Chi è jessico calcetto?',
@@ -181,11 +187,16 @@ const app = new Vue({
         timeOut(){
             setTimeout(()=> {this.replyMessage()}, 3000)
         },
-        filterContact(){
-            this.filteredContact = this.contactArr.filter((contatto) => {
-                return contatto.name.toLowerCase().includes(this.searchInput);
+        filterContact() {
+            this.contactArr.forEach((contatto) => {
+                if(contatto.name.toLowerCase().includes(this.searchInput.toLowerCase())){
+                    contatto.visibile = true
+                }else{
+                    contatto.visibile = false
+                }
             })
-        }
+
+        },
 
 
     }     

@@ -71,7 +71,8 @@
                             v-for="(e, i) in contactArr"
                             @click="selectedContact(i)">
                                 <div class="row"
-                                :class="{bg_ltgrey: counterIndexContact == i}"
+                                :class="{bg_ltgrey: counterIndexContact == i, 'd-none': !e.visibile}"
+                                
                                 >
                                     <div class="col">
                                         <div class="row h70p chat">
