@@ -8,12 +8,13 @@ const app = new Vue({
 
         counterIndexContact: 0,
         message: '',
+        searchInput: '',
+        filteredContact: [],
     
         contactArr: [
             {
                 profileImg: 'img/avatar_1.jpg',
                 name: 'Giovanni',
-                dateMess: '15:11 23/11/2020',
                 lastAccess: '10:49',
                 historicalMessage: [
                     {
@@ -31,7 +32,6 @@ const app = new Vue({
             {
                 profileImg: 'img/avatar_2.jpg',
                 name: 'Michele',
-                dateMess: '15:11 23/11/2020',
                 lastAccess: '10:15',
                 historicalMessage: [
                     {
@@ -49,7 +49,6 @@ const app = new Vue({
             {
                 profileImg: 'img/avatar_3.jpg',
                 name: 'Francesco',
-                dateMess: '15:11 23/11/2020',
                 lastAccess: '9:32',
                 historicalMessage: [
                     {
@@ -67,7 +66,6 @@ const app = new Vue({
             {
                 profileImg: 'img/avatar_4.jpg',
                 name: 'Jhonny',
-                dateMess: '15:11 23/11/2020',
                 lastAccess: '6:46',
                 historicalMessage: [
                     {
@@ -86,7 +84,6 @@ const app = new Vue({
             {
                 profileImg: 'img/avatar_5.jpg',
                 name: 'Franca',
-                dateMess: '15:11 23/11/2020',
                 lastAccess: '10:01',
                 historicalMessage: [
                     {
@@ -105,7 +102,6 @@ const app = new Vue({
             {
                 profileImg: 'img/avatar_6.jpg',
                 name: 'Donatella',
-                dateMess: '15:11 23/11/2020',
                 lastAccess: '10:52',
                 historicalMessage: [
                     {
@@ -124,7 +120,6 @@ const app = new Vue({
             {
                 profileImg: 'img/avatar_8.jpg',
                 name: 'Federico',
-                dateMess: '15:11 23/11/2020',
                 lastAccess: '10:29',
                 historicalMessage: [
                     {
@@ -143,7 +138,6 @@ const app = new Vue({
             {
                 profileImg: 'img/avatar_io.jpg',
                 name: 'Giorgia',
-                dateMess: '15:11 23/11/2020',
                 lastAccess: '9:59',
                 historicalMessage: [
                     {
@@ -186,7 +180,13 @@ const app = new Vue({
         },
         timeOut(){
             setTimeout(()=> {this.replyMessage()}, 3000)
+        },
+        filterContact(){
+            this.filteredContact = this.contactArr.filter((contatto) => {
+                return contatto.name.toLowerCase().includes(this.searchInput);
+            })
         }
+
 
     }     
 })

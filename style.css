@@ -23,13 +23,10 @@ body{
     padding: 5px;
 }
 
-button{
-    width: 18%;
-    height: 95%;
-    background-color: white;
-    padding: 5px;
+label{
     color: #d9dbd4;
-    border: none;
+    background-color: white;
+    margin: 10px;
 }
 
 .main{
