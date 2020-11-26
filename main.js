@@ -5,7 +5,7 @@ const app = new Vue({
             profileImg: 'img/avatar_7.jpg',
             name: 'Davide Rinaldi'
         },
-
+        activeEmoji: false,
         counterIndexContact: 0,
         message: '',
         searchInput: '',
@@ -178,7 +178,7 @@ const app = new Vue({
         replyMessage(){
             this.contactArr[this.counterIndexContact].historicalMessage.push(
                 {
-                    message: 'Ci sono riuscito!!!',
+                    message: 'Lasciami stare',
                     time: new Date().toLocaleDateString(),
                     type: 'ricevuto',
                 }
@@ -197,7 +197,8 @@ const app = new Vue({
             })
 
         },
-
-
+        active(){ 
+            this.activeEmoji = !this.activeEmoji
+        },
     }     
 })

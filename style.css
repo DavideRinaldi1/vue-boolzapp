@@ -49,6 +49,22 @@ label{
     clear: both;
 }
 
+.emoticon_box{
+    width: 40%;
+    height: 20%;
+    border-radius: 5px;
+    position: absolute;
+    left: 5px;
+    bottom: 5px;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.emoticon_box::-webkit-scrollbar {
+    display: none;
+}
+
 .message{
     border: none;
     width: 100%;
@@ -80,6 +96,12 @@ label{
 
 .chat:hover{
     background-color: lightgray;
+}
+
+.nameChat{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .nameChat h6{
@@ -114,6 +136,19 @@ label{
     position: absolute;
     bottom: 0;
     right: 5px;
+}
+
+.close{
+    color: gray;
+    font-size: .8rem;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+.drop_down{
+    width: 100px;
+    font-size: .6rem;
 }
 
 .listContact{

@@ -14,9 +14,11 @@
         <title>BoolZap</title>
     </head>
     <body>
+        <!-- root VUE.JS -->
         <div id="root">
             <div class="container ms_container">
                 <div class="row h100">
+                    <!-- colonna di sx -->
                     <div class="col-4 border_dx h100 bg_white">
                         <div class="row">
                             <div class="col h70p bg_ltgrey">
@@ -83,6 +85,7 @@
                                             </div>
                                             <div class="col-9 nameChat">
                                                 <h6>{{e.name}}</h6>
+                                                <small class="text-muted troncate">{{e.historicalMessage[e.historicalMessage.length - 1].message}}</small>
                                             </div>
                                         </div>
                                     </div>
@@ -121,15 +124,20 @@
                                     <p class="messages" :class="message.type">
                                         {{message.message}}
                                         <span class="hour">{{message.time}}</span>
+                                        <span class="close"><i class="far fa-times-circle"></i></span>
                                     </p>
                                 </template>
+                                <div class="emoticon_box bg_ltgrey"
+                                :class="{'d-none': activeEmoji === false}">
+                                    😀 😃 😄 😁 😆 😅 😂 🤣 😊 😇 🙂 🙃 😉 😌 😍 🥰 😘 😗 😙 😚 😋 😛 😝 😜 🤪 🤨 🧐 🤓 😎 🤩 🥳 😏 😒 😞 😔 😟 😕 🙁 ☹️ 😣 😖 😫 😩 🥺 😢 😭 😤 😠 😡 🤬 🤯 😳 🥵 🥶 😱 😨 😰 😥 😓 🤗 🤔 🤭 🤫 🤥 😶 😐 😑 😬 🙄 😯 😦 😧 😮 😲 🥱 😴 🤤 😪 😵 🤐 🥴 🤢 🤮 🤧 😷 🤒 🤕 🤑 🤠 😈 👿 👹 👺 🤡 💩 👻 💀 ☠️ 👽 👾 🤖 🎃 😺 😸 😹 😻 😼 😽 🙀 😿 😾 
+                                </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col h70p bg_ltgrey">
                                 <div class="row h70p">
                                     <div class="col-1 d-flex align-items-center justify-content-center">
-                                        <a href="#"><i class="far fa-smile my_icons"></i></a>
+                                        <a href="#" @click="active()"><i class="far fa-smile my_icons"></i></a>
                                     </div>
                                     <div class="col-10 d-flex align-items-center">
                                         <input type="text" class="message" placeholder="Scrivi un messaggio" v-model="message" @keyup.13="sendMessage(), timeOut()">
