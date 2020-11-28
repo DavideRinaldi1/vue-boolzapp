@@ -65,6 +65,11 @@ label{
     display: none;
 }
 
+.emoticon_box > span{
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
 .message{
     border: none;
     width: 100%;

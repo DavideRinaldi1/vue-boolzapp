@@ -124,12 +124,14 @@
                                     <p class="messages" :class="message.type">
                                         {{message.message}}
                                         <span class="hour">{{message.time}}</span>
-                                        <span class="close"><i class="far fa-times-circle"></i></span>
+                                        <span class="close"><i class="fas fa-chevron-down"></i></span>
                                     </p>
                                 </template>
                                 <div class="emoticon_box bg_ltgrey"
                                 :class="{'d-none': activeEmoji === false}">
-                                    😀 😃 😄 😁 😆 😅 😂 🤣 😊 😇 🙂 🙃 😉 😌 😍 🥰 😘 😗 😙 😚 😋 😛 😝 😜 🤪 🤨 🧐 🤓 😎 🤩 🥳 😏 😒 😞 😔 😟 😕 🙁 ☹️ 😣 😖 😫 😩 🥺 😢 😭 😤 😠 😡 🤬 🤯 😳 🥵 🥶 😱 😨 😰 😥 😓 🤗 🤔 🤭 🤫 🤥 😶 😐 😑 😬 🙄 😯 😦 😧 😮 😲 🥱 😴 🤤 😪 😵 🤐 🥴 🤢 🤮 🤧 😷 🤒 🤕 🤑 🤠 😈 👿 👹 👺 🤡 💩 👻 💀 ☠️ 👽 👾 🤖 🎃 😺 😸 😹 😻 😼 😽 🙀 😿 😾 
+                                    <span v-for="(emoji, i) in emojiArr" @click="emojiIndex(i), addEmoji()">
+                                        {{emoji}}
+                                    </span>
                                 </div>
                             </div>
                         </div>
