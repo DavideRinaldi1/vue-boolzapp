@@ -1,4 +1,4 @@
-# Boolzap
+# Boolzapp
 
 Boolzap è un clone dell'applicazione web di Whatsapp.
 
